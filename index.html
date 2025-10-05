@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/favicon/scs.png" type="image/x-icon">
+    <title>Subhadra Consultancy Services | Connecting Talent to Opportunities</title>
+    <meta name="description" content="Empowering freshers and job seekers with expert guidance, skill-building, and personalized job placement support.">
+    <meta property="og:image" content="http://static.photos/technology/1200x630/42">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            500: '#1e3a8a',
+                            600: '#1e40af'
+                        },
+                        secondary: {
+                            500: '#0284c7',
+                            600: '#0ea5e9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .glassmorph {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #0284c7 100%);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .scroll-to-top {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="glassmorph fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-3xl font-bold text-gray-900 mb-4">Subhadra Consultancy Services</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="#home" class="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#about" class="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium">About Us</a>
+                        <a href="#testimonials" class="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium">Testimonials</a>
+                        <a href="#services" class="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium">Our Services</a>
+                        <a href="#contact" class="ml-4 bg-primary-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-700 transition duration-300">Contact Us</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-700 hover:text-primary-600">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden glassmorph absolute w-full left-0 right-0">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="text-gray-700 hover:text-primary-600 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-primary-600 block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-primary-600 block px-3 py-2 rounded-md text-base font-medium">Testimonials</a>
+                <a href="#services" class="text-gray-700 hover:text-primary-600 block px-3 py-2 rounded-md text-base font-medium">Our Services</a>
+                <a href="#contact" class="block bg-primary-600 text-white px-3 py-2 rounded-md text-base font-medium hover:bg-primary-700 transition duration-300">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient pt-24 pb-16 md:pt-32 md:pb-24 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 fade-in">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">Leading Career & Job Consultancy</h1>
+                    <p class="text-xl md:text-2xl mb-8 opacity-90">Empowering freshers and job seekers with expert guidance, skill-building, and personalized job placement support.</p>
+                    <a href="#about" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-primary-600 bg-white hover:bg-gray-100 transition duration-300">
+                        Learn More
+                        <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+                    </a>
+                </div>
+                <div class="hidden md:block md:w-1/2 fade-in">
+                    <img src="./assets/images/Title_Image.png" alt="Construction Site" class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">About Our Company</h2>
+                <div class="w-20 h-1 bg-primary-600 mx-auto"></div>
+            </div>
+            <div class="md:flex md:items-center md:space-x-12">
+                <div class="md:w-1/2 mb-8 md:mb-0 fade-in">
+                    <img src="./assets/images/About_Us_Section_Image.png" alt="Office Team" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2 fade-in">
+                    <p class="text-lg text-gray-600 mb-6">At Subhadra Consultancy Services, we’re dedicated to helping fresh graduates and early-career professionals land their first job. With candidate-first approach, we connect candidates with opportunities and provide expert guidance throughout their job search journey.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-primary-600 mr-3 mt-1"></i>
+                            <span class="text-gray-700">Career Coaching & Skill Development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-primary-600 mr-3 mt-1"></i>
+                            <span class="text-gray-700">Job Matching with relevant opportunities</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-primary-600 mr-3 mt-1"></i>
+                            <span class="text-gray-700">Interview Preparation for job success</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check-circle" class="text-primary-600 mr-3 mt-1"></i>
+                            <span class="text-gray-700">Ongoing Job Search Support</span>
+                        </li>
+                    </ul>
+                    <div class="flex space-x-4">
+                        <div class="text-center p-4 rounded-lg bg-gray-50">
+                            <div class="text-3xl font-bold text-primary-600">5+</div>
+                            <div class="text-gray-600">Industry Experts Associated</div>
+                        </div>
+                        <div class="text-center p-4 rounded-lg bg-gray-50">
+                            <div class="text-3xl font-bold text-primary-600">50+</div>
+                            <div class="text-gray-600">Candidates Placed</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
+                <div class="w-20 h-1 bg-primary-600 mx-auto"></div>
+            </div>
+            <div class="relative overflow-hidden fade-in">
+                <div id="testimonial-carousel" class="flex transition-transform duration-500">
+                    <!-- Testimonial 1 -->
+                    <div class="min-w-full px-4">
+                        <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <img src="http://static.photos/people/200x200/1" alt="Client" class="w-16 h-16 rounded-full object-cover mr-4">
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Rajesh Mohanty</h4>
+                                    <p class="text-gray-600">IT Fresher</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 italic mb-6">"Their team understood my career goals and aligned me with the right opportunities. Their personalized attention made all the difference."</p>
+                            <div class="text-primary-600">
+                                <i data-feather="star" class="inline"></i>
+                                <i data-feather="star" class="inline"></i>
+                                <i data-feather="star" class="inline"></i>
+                                <i data-feather="star" class="inline"></i>
+                                <i data-feather="star" class="inline"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 2 -->
+                    <div class="min-w-full px-4">
+                        <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <img src="http://static.photos/people/200x200/2" alt="Client" class="w-16 h-16 rounded-full object-cover mr-4">
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Priyanka Das</h4>
+                                    <p class="text-gray-600">First-time Job Seeker</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 italic mb-6">"Subhadra Consultancy Services helped me land my first job right after graduation. They didn’t just find me a job — they guided me every step of the way. I’m truly grateful!"</p>
+                            <div class="text-primary-600">
+                                <i data-feather="star" class="inline"></i>
+                                <i data-feather="star" class="inline"></i>
+                                <i data-feather="star" class="inline"></i>
+                                <i data-feather="star" class="inline"></i>
+                                <i data-feather="star" class="inline"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial 3 -->
+                    <div class="min-w-full px-4">
+                        <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <div class="flex items-center mb-6">
+                                <img src="http://static.photos/people/200x200/3" alt="Client" class="w-16 h-16 rounded-full object-cover mr-4">
+                                <div>
+                                    <h4 class="font-bold text-gray-900">Amit Sharma</h4>
+                                    <p class="text-gray-600">Diploma Holder</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-700 italic mb-6">"As a diploma fresher, I struggled to find the right job. Subhadra Consultancy not only found me interviews but also prepared me to crack them!"</p>
+                            <div class="text-primary-600">
+                                <i data-feather="star" class="inline"></i>
+                                <i data-feather="star" class="inline"></i>
+                                <i data-feather="star" class="inline"></i>
+                                <i data-feather="star" class="inline"></i>
+                                <i data-feather="star" class="inline"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-8">
+                    <button id="prev-btn" class="p-2 rounded-full bg-white shadow-md mr-4 hover:bg-gray-100">
+                        <i data-feather="chevron-left" class="text-primary-600"></i>
+                    </button>
+                    <button id="next-btn" class="p-2 rounded-full bg-white shadow-md hover:bg-gray-100">
+                        <i data-feather="chevron-right" class="text-primary-600"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Major services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Major Services</h2>
+                <div class="w-20 h-1 bg-primary-600 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 fade-in">
+                <!-- Service 1 -->
+                <div class="group glassmorph rounded-lg overflow-hidden shadow-md transition duration-300 card-hover">
+                    <img src="./assets/images/resume.png" alt="Resume Building & Skill Profiling" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Resume Building & Skill Profiling</h3>
+                        <p class="text-gray-600 hidden group-hover:block">We craft compelling resumes and highlight the skills that matter most to employers, helping candidates stand out from the crowd.</p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="group glassmorph rounded-lg overflow-hidden shadow-md transition duration-300 card-hover">
+                    <img src="./assets/images/job serach.png" alt="Job Search Assistance" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Job Search Assistance</h3>
+                        <p class="text-gray-600 hidden group-hover:block">Our team actively connects candidates to job openings that match their skills, interests, and career goals — especially entry-level and fresher roles.</p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="group glassmorph rounded-lg overflow-hidden shadow-md transition duration-300 card-hover">
+                    <img src="./assets/images/interview.png" alt="Interview Preparation & Coaching" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Interview Preparation & Coaching</h3>
+                        <p class="text-gray-600 hidden group-hover:block">Personalized interview coaching sessions to build confidence, improve communication, and help candidates make the right impression.</p>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="group glassmorph rounded-lg overflow-hidden shadow-md transition duration-300 card-hover">
+                    <img src="./assets/images/councelling.png" alt="Career Counseling & Guidance" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Career Counseling & Guidance</h3>
+                        <p class="text-gray-600 hidden group-hover:block">One-on-one sessions to help candidates discover their strengths, explore career paths, and make informed career decisions.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+                <div class="w-20 h-1 bg-primary-600 mx-auto"></div>
+            </div>
+            <div class="max-w-lg mx-auto text-center fade-in">
+                <p class="text-xl text-gray-600 mb-8">"For details, click on the Contact Us button below."</p>
+                <a href="#" class="inline-block bg-primary-600 text-white px-8 py-3 rounded-full text-lg font-medium hover:bg-primary-700 transition duration-300 transform hover:scale-105">
+                    Contact Us
+                    <i data-feather="mail" class="ml-2 inline"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="glassmorph pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">Subhadra Consultancy Services</h3>
+                    <p class="text-gray-600">Pune, Maharashtra</p>
+                    <p class="text-gray-600 mt-2">Subhadraconsultancy.services@gmail.com</p>
+                    <p class="text-gray-600">+91 7028374676</p>
+                </div>
+                <div>
+                    <h4 class="text-md font-bold text-gray-900 mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-600 hover:text-primary-600">Home</a></li>
+                        <li><a href="#about" class="text-gray-600 hover:text-primary-600">About Us</a></li>
+                        <li><a href="#testimonials" class="text-gray-600 hover:text-primary-600">Testimonials</a></li>
+                        <li><a href="#services" class="text-gray-600 hover:text-primary-600">Our Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-md font-bold text-gray-900 mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-primary-600">Resume Building & Skill Profiling</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary-600">Job Search Assistance</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary-600">Interview Preparation & Coaching</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary-600">Career Counseling & Guidance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-md font-bold text-gray-900 mb-4">Connect With Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-primary-600">
+                            <i data-feather="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-primary-600">
+                            <i data-feather="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="text-gray-600 hover:text-primary-600">
+                            <i data-feather="twitter" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-200 mt-8 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2025 Subhadra Consultancy Services All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button id="scroll-top" class="hidden fixed bottom-8 right-8 bg-primary-600 text-white p-3 rounded-full shadow-lg hover:bg-primary-700 transition duration-300 scroll-to-top">
+        <i data-feather="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Testimonial carousel
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('#testimonial-carousel > div');
+        const carousel = document.getElementById('testimonial-carousel');
+
+        function showTestimonial(index) {
+            currentTestimonial = index;
+            carousel.style.transform = `translateX(-${currentTestimonial * 100}%)`;
+        }
+
+        document.getElementById('prev-btn').addEventListener('click', function() {
+            currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        });
+
+        document.getElementById('next-btn').addEventListener('click', function() {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        });
+
+        // Auto rotate testimonials
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }, 5000);
+
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scroll-top');
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.remove('hidden');
+            } else {
+                scrollTopBtn.classList.add('hidden');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Fade in animation for sections
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const fadeObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        fadeElements.forEach(element => {
+            element.classList.add('opacity-0');
+            fadeObserver.observe(element);
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Initialize feather icons
+        feather.replace();
+    </script>
+</body>
+</html>
